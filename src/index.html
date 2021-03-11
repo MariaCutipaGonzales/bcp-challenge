@@ -8,6 +8,26 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <mg-root></mg-root>
+  <mg-root>
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      div {
+        display: flex;
+        height: 100vh;
+        width: 100%;        
+        align-items: center;
+        justify-content: center;
+      }
+      
+    </style>
+    <div>
+      <img src="assets/img/logo.png" alt="Logo BCP" width="150px"/>
+    </div>
+
+    <div class="loader"></div>
+  </mg-root>
 </body>
 </html>
