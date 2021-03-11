@@ -1,0 +1,12 @@
+@import 'variables';
+
+.header {
+    background-color: $mg-blue;
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $mg-white;
+    text-align: center;
+    font-size: 1rem;
+}

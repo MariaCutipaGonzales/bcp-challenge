@@ -3,17 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlertModule } from 'ngx-bootstrap/alert';
+import { CoreModule } from '@core/core.module';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AlertModule.forRoot()
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, CoreModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
