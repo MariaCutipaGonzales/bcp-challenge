@@ -1,1 +1,3 @@
-<p>agency-list works!</p>
+<ng-container *ngIf="agenciesList.length">
+    <mg-agency-info-item *ngFor="let item of agenciesList" [agency]="item" (agencyInfo)="goToDetail($event)"></mg-agency-info-item>
+</ng-container>

@@ -1,0 +1,35 @@
+@import 'variables';
+
+.item-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;    
+    &-image {
+        width: 20%;
+        cursor: pointer;
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 70%;
+        cursor: pointer;
+        span:first-child {
+            font-weight: bold;
+        }
+        span:last-child {
+            color: $mg-blue;
+        }
+    }
+    &-action {
+        img {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,13 +1,13 @@
-<div class="d-flex justify-content-between" (click)="clickAgency()">
-    <div class="item-image">
-        <img src="" alt="agency info">
+<div class="item-box" (click)="clickAgency()">
+    <div class="item-box-image">
+        <img [src]="('assets/img/agencia-' + imgRandom + '.jpg')" alt="agency info">
     </div>
-    <div class="item-info">
+    <div class="item-box-info">
         <span>{{agency.agencia}}</span>
         <span>{{agency.provincia}}</span>
         <span>{{agency.direccion}}</span>
     </div>
-    <div class="item-action">
+    <div class="item-box-action">
         <img src="assets/icons/star.svg" alt="agency favorite">
     </div>
 </div>

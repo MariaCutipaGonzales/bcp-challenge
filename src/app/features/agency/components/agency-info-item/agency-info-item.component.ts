@@ -7,11 +7,14 @@ import { Agency } from '@core/models/agency-model';
   styleUrls: ['./agency-info-item.component.scss'],
 })
 export class AgencyInfoItemComponent implements OnInit {
+  public imgRandom: number = 1;
   @Input() agency: Agency = {} as Agency;
   @Output() agencyInfo: EventEmitter<Agency> = new EventEmitter();
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.imgRandom = Math.round(Math.random() * 6);
+  }
 
   clickAgency() {
     this.agencyInfo.emit(this.agency);
