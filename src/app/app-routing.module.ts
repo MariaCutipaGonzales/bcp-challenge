@@ -4,8 +4,12 @@ import { AgencyModule } from './features/agency/agency.module';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'agency',
+    pathMatch: 'full'
+  },
+  {
     path: 'agency',
-    component: AgencyModule,
     loadChildren: () =>
       import('./features/agency/agency.module').then((m) => m.AgencyModule),
   },

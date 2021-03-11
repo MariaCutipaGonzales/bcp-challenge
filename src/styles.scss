@@ -1,5 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
 
-$mg-orange: #ff7800;
-$mg-blue: #002a8d;
-$mg-white: #ffffff;
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: $mg-black;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
