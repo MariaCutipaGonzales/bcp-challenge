@@ -9,7 +9,7 @@ import { environment } from '@env';
 import { HeaderComponent } from './components/header/header.component';
 import { CustomSerializer } from './store/router/custom-serializer';
 import { EffectsModule } from '@ngrx/effects';
-import { appReducer } from './store/core/core-app.state';
+import { appReducer } from './store/core.state';
 
 @NgModule({
   declarations: [HeaderComponent],

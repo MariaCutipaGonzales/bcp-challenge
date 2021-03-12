@@ -1,4 +1,8 @@
-<mg-header></mg-header>
-<div class="container mt-4">
-    <router-outlet></router-outlet>
+<div>
+    <mg-header></mg-header>
+    <div class="container mt-4">
+
+        <router-outlet></router-outlet>
+    </div>
 </div>
+<mg-loader *ngIf="showLoading | async"></mg-loader>

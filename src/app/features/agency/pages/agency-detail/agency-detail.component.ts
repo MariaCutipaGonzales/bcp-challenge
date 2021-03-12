@@ -2,7 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Agency } from '@core/models/agency-model';
-import { AppState } from '@core/store/core/core-app.state';
+import { AppState } from '@core/store/core.state';
+import { setLoadingSpinner } from '@core/store/shared/shared.actions';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { updateAgency } from '../../store/agency-actions';
@@ -50,8 +51,8 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    console.log('onSubmit', this.agency);
     if (this.agencyFormUpdate.valid) {
+      this.store.dispatch(setLoadingSpinner({ status: true }));
       const valueAgency = this.agencyFormUpdate.value as Agency;
       this.store.dispatch(
         updateAgency({
@@ -68,10 +69,10 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  updateLocationAgency(location: {latitude: string, longitude: string}) {
+  updateLocationAgency(location: { latitude: string; longitude: string }) {
     this.agencyFormUpdate.patchValue({
       lat: location.latitude,
-      lon: location.longitude
+      lon: location.longitude,
     });
   }
 }
