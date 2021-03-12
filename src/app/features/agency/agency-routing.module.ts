@@ -7,6 +7,11 @@ import { AgencyListComponent } from './pages/agency-list/agency-list.component';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: 'list'
+  },
+  {
+    path: '',
     component: AgencyComponent,
     children: [
       {

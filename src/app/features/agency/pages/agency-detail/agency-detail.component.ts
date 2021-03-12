@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Agency } from '@core/models/agency-model';
 import { AppState } from '@core/store/core/core-app.state';
 import { Store } from '@ngrx/store';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { updateAgency } from '../../store/agency-actions';
 import { getAgencyById } from '../../store/agency-selectors';
 
@@ -16,7 +17,7 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
   agency: Agency[] = [];
   agencyFormUpdate: FormGroup;
   agencySubscription: Subscription = new Subscription();
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>, private router: Router) {
     this.agencyFormUpdate = new FormGroup({
       agencia: new FormControl(null, [Validators.required]),
       distrito: new FormControl(null, [Validators.required]),
@@ -62,7 +63,8 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
           },
         })
       );
-    } else {
+
+      this.router.navigate(['/agency']);
     }
   }
 
