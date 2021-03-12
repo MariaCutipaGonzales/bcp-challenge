@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { CoreModule } from '@core/core.module';
 import { AgmCoreModule } from '@agm/core';
-import { AlertModule } from 'ngx-bootstrap/alert';
 import { SharedModule } from '@shared/shared.module';
+import { environment } from '@env';
+import { AlertModule } from 'ngx-bootstrap/alert';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -15,7 +17,7 @@ import { SharedModule } from '@shared/shared.module';
     CoreModule,
     SharedModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCGepzv727c0IRl9FtlIk3z860m-I82D10',
+      apiKey: environment.MAPS_KEY,
     }),
     AlertModule.forRoot(),
   ],
