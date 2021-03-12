@@ -1,9 +1,9 @@
 export class Utils {
-  public static getRandomNumber(maxNumber: number) {
+  public static getRandomNumber(maxNumber: number): number {
     return Math.round(Math.random() * maxNumber);
   }
 
-  public static getImgSrc() {
+  public static getImgSrc(): string {
     let number = this.getRandomNumber(6);
     return `assets/img/agencia-${number}.jpg`;
   }

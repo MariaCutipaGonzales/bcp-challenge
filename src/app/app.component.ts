@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   showLoading: Observable<boolean> = new Observable<boolean>();
   constructor(private store: Store<AppState>) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.showLoading = this.store.select(getLoading);
   }
 }

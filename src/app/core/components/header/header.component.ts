@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     this.getTitlePage();
   }
 
-  getTitlePage() {
+  getTitlePage(): void {
     this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),

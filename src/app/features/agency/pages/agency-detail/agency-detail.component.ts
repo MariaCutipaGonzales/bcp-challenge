@@ -46,11 +46,11 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
     this.agencySubscription.unsubscribe();
   }
 
-  initForm(stateForm: Agency) {
+  initForm(stateForm: Agency): void {
     this.agencyFormUpdate.patchValue(stateForm);
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.agencyFormUpdate.valid) {
       this.store.dispatch(setLoadingSpinner({ status: true }));
       const valueAgency = this.agencyFormUpdate.value as Agency;
@@ -69,7 +69,7 @@ export class AgencyDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  updateLocationAgency(location: { latitude: string; longitude: string }) {
+  updateLocationAgency(location: { latitude: string; longitude: string }): void {
     this.agencyFormUpdate.patchValue({
       lat: location.latitude,
       lon: location.longitude,
