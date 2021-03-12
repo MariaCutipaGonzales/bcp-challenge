@@ -10,7 +10,7 @@
       [longitude]="mark.lon"
       [label]="mark.agencia"
       [markerDraggable]="draggable"
-      (dragEnd)="markerDragEnd(mark, $event)"
+      (dragEnd)="markerDragEnd($event)"
     >
       <agm-info-window>
         <div class="infor-window-flex">

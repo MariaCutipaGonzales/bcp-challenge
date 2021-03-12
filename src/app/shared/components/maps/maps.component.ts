@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Agency } from '@core/models/agency-model';
-import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'mg-maps',
@@ -20,7 +18,10 @@ export class MapsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  markerDragEnd(location: Agency, $event: any) {
-    this.marker.emit({latitude: $event.latLng.lat(), longitude: $event.latLng.lng()})
+  markerDragEnd($event: any) {
+    this.marker.emit({
+      latitude: $event.latLng.lat(),
+      longitude: $event.latLng.lng(),
+    });
   }
 }

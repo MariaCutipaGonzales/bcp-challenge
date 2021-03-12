@@ -19,6 +19,6 @@ export const getAgencyById = createSelector(
   getAgencyEntities,
   getCurrentRoute,
   (posts, route: RouterStateUrl) => {
-    return posts ? posts[route.params['id']] : null;
+    return posts ? posts[route.params.id] : null;
   }
 );

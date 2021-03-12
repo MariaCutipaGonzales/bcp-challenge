@@ -8,7 +8,7 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'BCP CHALLENGE';
+  title = 'BCP CHALLENGE';
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
           while (child?.firstChild) {
             child = child.firstChild;
           }
-          return child?.snapshot.data['title'] || this.title;
+          return child?.snapshot.data?.title || this.title;
         })
       )
       .subscribe((title: string) => {
