@@ -1,4 +1,5 @@
 export interface Agency {
+  id: string;
   agencia: string;
   distrito: string;
   provincia: string;
@@ -6,4 +7,8 @@ export interface Agency {
   direccion: string;
   lat: number;
   lon: number;
+}
+
+export enum LOCALSTORAGE_KEY {
+  AGENCY = 'agency',
 }

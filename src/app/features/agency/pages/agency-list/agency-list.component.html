@@ -1,3 +1,5 @@
-<ng-container *ngIf="agenciesList.length">
-    <mg-agency-info-item *ngFor="let item of agenciesList" [agency]="item" (agencyInfo)="goToDetail($event)"></mg-agency-info-item>
-</ng-container>
+<mg-agency-info-item
+    *ngFor="let item of agenciesList | async"
+    [agency]="item"
+    (agencyInfo)="goToDetail($event)">
+</mg-agency-info-item>

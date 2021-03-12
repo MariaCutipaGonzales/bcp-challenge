@@ -6,10 +6,20 @@ import { AgencyListComponent } from './pages/agency-list/agency-list.component';
 import { AgencyDetailComponent } from './pages/agency-detail/agency-detail.component';
 import { AgencyComponent } from './agency.component';
 import { AgencyService } from './services/agency.service';
+import { StoreModule } from '@ngrx/store';
+import { agencyReducer } from './store/agency-reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { AgencyEffects } from './store/agency-effects';
 
 @NgModule({
   declarations: [AgencyComponent, AgencyListComponent, AgencyDetailComponent],
-  imports: [CommonModule, AgencyRoutingModule, AgencyComponentsModule],
+  imports: [
+    CommonModule,
+    StoreModule.forFeature('agency', agencyReducer),
+    EffectsModule.forFeature([AgencyEffects]),
+    AgencyRoutingModule,
+    AgencyComponentsModule,
+  ],
   providers: [AgencyService],
 })
 export class AgencyModule {}

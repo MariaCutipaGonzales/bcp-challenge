@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgencyModule } from './features/agency/agency.module';
 
 const routes: Routes = [
   {
