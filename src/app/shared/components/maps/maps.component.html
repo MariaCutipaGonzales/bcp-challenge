@@ -6,7 +6,6 @@
 >
   <ng-container *ngFor="let mark of list; let i = index">
     <agm-marker
-      (markerClick)="clickedMarker(mark.agencia, i)"
       [latitude]="mark.lat"
       [longitude]="mark.lon"
       [label]="mark.agencia"

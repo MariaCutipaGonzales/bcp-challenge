@@ -23,8 +23,4 @@ export class MapsComponent implements OnInit {
   markerDragEnd(location: Agency, $event: any) {
     this.marker.emit({latitude: $event.latLng.lat(), longitude: $event.latLng.lng()})
   }
-
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
 }
