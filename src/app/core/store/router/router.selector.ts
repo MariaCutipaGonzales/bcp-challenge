@@ -6,5 +6,6 @@ export const getRouterState = createFeatureSelector<
 >('router');
 
 export const getCurrentRoute = createSelector(getRouterState, (router) => {
+  console.log('router', router);
   return router.state;
 });

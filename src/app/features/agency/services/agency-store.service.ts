@@ -15,7 +15,6 @@ export class AgencyStoreService {
     if (this.isInit) {
       return;
     }
-
     this.isInit = true;
     this.loadAgencyFromLocalStore();
 

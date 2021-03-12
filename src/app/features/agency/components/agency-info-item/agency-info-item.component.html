@@ -1,6 +1,6 @@
 <div class="item-box" (click)="clickAgency()">
     <div class="item-box-image">
-        <img [src]="('assets/img/agencia-' + imgRandom + '.jpg')" alt="agency info">
+        <img [src]="agency.img" [alt]="agency.agencia">
     </div>
     <div class="item-box-info">
         <span>{{agency.agencia}}</span>

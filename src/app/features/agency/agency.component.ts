@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AgencyStoreService } from './services/agency-store.service';
 
 @Component({
   selector: 'mg-agency',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agency.component.scss'],
 })
 export class AgencyComponent implements OnInit {
-  constructor() {}
+  constructor(private agencyStoreService: AgencyStoreService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.agencyStoreService.initSync();
+  }
 }

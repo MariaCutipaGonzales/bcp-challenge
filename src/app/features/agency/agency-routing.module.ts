@@ -15,7 +15,7 @@ const routes: Routes = [
         data: { title: 'Agencias' },
       },
       {
-        path: 'detail',
+        path: 'detail/:id',
         component: AgencyDetailComponent,
         data: { title: 'Detalle de Agencia' },
       },

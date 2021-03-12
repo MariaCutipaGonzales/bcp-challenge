@@ -7,6 +7,7 @@ export interface Agency {
   direccion: string;
   lat: number;
   lon: number;
+  img: string;
 }
 
 export enum LOCALSTORAGE_KEY {

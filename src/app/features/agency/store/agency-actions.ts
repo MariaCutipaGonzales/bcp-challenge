@@ -24,7 +24,7 @@ export const loadAgencyLocal = createAction(
 
 export const updateAgency = createAction(
   AgencyActions.update,
-  props<{ id: string; changes: Agency }>()
+  props<{ agencies: Update<Agency> }>()
 );
 
 export const dummyAction = createAction('[dummy action]');

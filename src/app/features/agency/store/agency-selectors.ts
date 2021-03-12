@@ -12,7 +12,7 @@ export const getAgency = createSelector(
 );
 export const getAgencyEntities = createSelector(
   getAgencyState,
-  agencySelectors.selectEntities
+  agencySelectors.selectEntities,
 );
 
 export const getAgencyById = createSelector(

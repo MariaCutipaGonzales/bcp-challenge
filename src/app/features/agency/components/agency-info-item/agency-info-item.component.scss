@@ -1,35 +1,38 @@
-@import 'variables';
+@import "variables";
 
 .item-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e1e1;
+  outline: none;
+  &-image {
+    width: 20%;
+    cursor: pointer;
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+  &-info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;    
-    &-image {
-        width: 20%;
-        cursor: pointer;
-        img {
-            border-radius: 50%;
-            width: 100%;
-        }
+    align-items: flex-start;
+    width: 70%;
+    cursor: pointer;
+    span:first-child {
+      font-weight: bold;
     }
-    &-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 70%;
-        cursor: pointer;
-        span:first-child {
-            font-weight: bold;
-        }
-        span:last-child {
-            color: $mg-blue;
-        }
+    span:last-child {
+      color: $mg-blue;
     }
-    &-action {
-        img {
-            cursor: pointer;
-        }
+  }
+  &-action {
+    img {
+      cursor: pointer;
     }
+  }
 }

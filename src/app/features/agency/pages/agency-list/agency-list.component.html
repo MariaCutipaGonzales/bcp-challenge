@@ -1,5 +1,13 @@
-<mg-agency-info-item
-    *ngFor="let item of agenciesList | async"
-    [agency]="item"
-    (agencyInfo)="goToDetail($event)">
-</mg-agency-info-item>
+<div class="row">
+  <div class="col-12 col-md-5 overflow-scroll">
+    <mg-agency-info-item
+      *ngFor="let item of agenciesList | async"
+      [agency]="item"
+      [routerLink]="['/agency/detail', item.id]"
+    >
+    </mg-agency-info-item>
+  </div>
+  <div class="col-md">
+    <mg-maps [list]="agenciesList | async"></mg-maps>
+  </div>
+</div>

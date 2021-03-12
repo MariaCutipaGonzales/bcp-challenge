@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Agency } from '@core/models/agency-model';
+import { Utils } from '@core/utils/utils';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -14,7 +15,8 @@ export class AgencyService {
       map((data) => {
         const listAgency: Agency[] = [];
         for (let key in data) {
-          listAgency.push({ ...data[key], id: key });
+          let imgSrc = Utils.getImgSrc();
+          listAgency.push({ ...data[key], img: imgSrc, id: key });
         }
 
         return listAgency;

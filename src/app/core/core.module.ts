@@ -9,22 +9,15 @@ import { environment } from '@env';
 import { HeaderComponent } from './components/header/header.component';
 import { CustomSerializer } from './store/router/custom-serializer';
 import { EffectsModule } from '@ngrx/effects';
+import { appReducer } from './store/core/core-app.state';
 
 @NgModule({
   declarations: [HeaderComponent],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, StoreRouterConnectingModule],
   imports: [
     CommonModule,
     HttpClientModule,
-    StoreModule.forRoot(
-      {},
-      {
-        runtimeChecks: {
-          strictStateImmutability: true,
-          strictActionImmutability: true,
-        },
-      }
-    ),
+    StoreModule.forRoot(appReducer),
     StoreRouterConnectingModule.forRoot({
       serializer: CustomSerializer,
     }),

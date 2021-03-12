@@ -10,6 +10,10 @@ import { StoreModule } from '@ngrx/store';
 import { agencyReducer } from './store/agency-reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { AgencyEffects } from './store/agency-effects';
+import { SharedModule } from '@shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AlertModule } from 'ngx-bootstrap/alert';
+
 
 @NgModule({
   declarations: [AgencyComponent, AgencyListComponent, AgencyDetailComponent],
@@ -19,6 +23,9 @@ import { AgencyEffects } from './store/agency-effects';
     EffectsModule.forFeature([AgencyEffects]),
     AgencyRoutingModule,
     AgencyComponentsModule,
+    SharedModule,
+    ReactiveFormsModule,
+    AlertModule
   ],
   providers: [AgencyService],
 })

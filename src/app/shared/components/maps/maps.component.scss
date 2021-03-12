@@ -1,0 +1,26 @@
+agm-map {
+  width: 100%;
+  height: calc(100vh - 20vh);
+  .infor-window-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    b {
+      font-weight: bold;
+      line-height: 20px;
+    }
+
+    div {
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  }
+}

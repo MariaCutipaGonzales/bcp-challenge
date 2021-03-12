@@ -5,8 +5,7 @@ import { AgencyAdapter, initialState } from './agency-state';
 const _agencyReducer = createReducer(
   initialState,
   on(updateAgency, (state, action) => {
-    return AgencyAdapter.updateOne(
-      { id: action.id, changes: action.changes },
+    return AgencyAdapter.updateOne(action.agencies,
       state
     );
   }),
